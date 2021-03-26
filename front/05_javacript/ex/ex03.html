@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>문자열 다루기</title>
+    </head>
+    <body>
+        <script>
+            var text = "I must do what I want to do.";
+
+            // len: 문자열의 길이 - 함수가 아님 주의!!!
+            console.log(text.length)
+
+            // charAt : n번째 index의 문자 반환
+            console.log(text.charAt(5)); // t
+
+            // indexOf : 특정 문자가 어느 index에 있는지 반환(중복이면 첫번째로 찾은 인덱스 위치). 없으면 -1
+            console.log(text.indexOf('t')); // 5
+            console.log(text.indexOf('b')); // -1
+
+            // includes : 특정 문자열이 문장에 포함되어 있는지 확인. 있으면 true, 없으면 false 반환
+            console.log(text.includes("must"));   // true
+            console.log(text.includes("python")); // false
+
+            // replace : 문자열 치환 - 안타깝게도 처음 나타난 하나밖에 안바뀐다.
+            console.log(text.replace("I", "You"));
+            
+            // 특정 단어의 모든 문자열 치환 - 정규 표현식(Regular expression)을 사용한다.
+            console.log(text.replace(/I/g, 'You'));  //   /g 는 매치되는 모든 것을 의미한다.
+
+            // slice : 문자열의 일부를 잘라내기.  n ~ n-1까지의 문자열을 반환한다.
+            console.log(text.slice(2, 6)); // must 추출
+            
+            // split : 특정 문자를 기준으로 문자열 분리하고 배열에 저장
+            parts = text.split(" ");
+            console.log(parts);
+            
+            // trim : 문자열의 앞과 뒤의 공백 제거
+            let userId = "   marobiana   ";
+            console.log(userId);
+            console.log(userId.trim());
+        </script>
+    </body>
+</html>

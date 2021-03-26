@@ -1,0 +1,17 @@
+* { margin:auto;} 
+
+#wrap {max-width:1200px; background-color: #999;} 
+
+header {height:100px; background-color: darkorchid;}
+
+.nav1 {height:50px; background-color: deepskyblue;}
+
+.contents {height:450px; background-color:bisque;}
+.contents > .content1 {flex-grow:7; height:450px; background-color: coral;}
+.contents > .aside1 {flex-grow:3; height:450px; background-color:indianred;}
+.contents > .content1 > .at1 {max-width:700px; height:200px; background-color:cadetblue; margin-top:15px;}
+
+footer {height:200px; background:#777;}
+
+/* 밑으로 떨어져 있던 aside1을 옆에 붙인다. */
+.flex-row {display:flex;}

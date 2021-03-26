@@ -1,0 +1,18 @@
+
+.flex-row {display:flex}
+
+.flex-center {display:flex; justify-content: center;}
+
+.box-size {width:150px; height: 150px}
+
+.div1 {background-color: red;}
+.div2 {background-color: green;}
+.div3 {background-color: yellow;}
+.div4 {background-color: blue;}
+
+.margin-50 {margin-top:50px;}
+
+.margin-div1 {background-color: red;}
+.margin-div2 {background-color: green; margin-left:20px}
+.margin-div3 {background-color: yellow; margin-top:20px}
+.margin-div4 {background-color: blue; margin-top: 20px; margin-left:20px}

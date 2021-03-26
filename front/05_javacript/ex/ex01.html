@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자바스크립트 기본 예제</title>
+    </head>
+    <body>
+        <!-- javascript 영역-->
+        <script>
+            // 주석
+            /*
+                여러줄
+                주석
+            */
+            // integer 변수 선언
+            var number = 100;
+            // alert(number);
+            console.log("number:" + number);  // 브라우저 > 검사 > console 탭에서 결과 확인
+
+            // string 변수 선언
+            var str = "hello world!";
+            console.log("str:" + str);
+
+            // if 문
+            if (number == 100) {
+                console.log("number2는 20이다.");
+                var a = 5;
+                let b = 5;  // 지역 변수
+            }
+            console.log(a);
+            //console.log(b); // error: let으로 선언된 변수는 지역변수이므로 block 밖에서 사용 불가
+
+            // if문으로 string 비교
+            if (str == "hello world!") {
+                console.log("헬로우 월드가 맞다.");
+            }
+
+            // 문자열로된 숫자와 숫자 비교
+            let strNum = '10';
+            let num = 10;
+            if (strNum == num) { // 참
+                console.log("같은 숫자이다. == 비교");  
+            }
+
+            if (strNum === num) { // 거짓
+                console.log("같은 숫자이다. === 비교");  
+            }
+
+            var empty;
+            //alert(empty); // 변수에 아무값도 넣지 않으면 undefined 이다.
+
+            // 변수가 비어있는지 확인하기 - string 비교가 아님 주의!!!
+            if (empty == undefined) {   //  참
+                console.log("empty 변수는 비어있다.");
+            }
+
+            var nullVar = null; // 명시적으로 비어있음을 저장
+            if (nullVar == null) {    // 참
+                console.log("nullVar는 비어있다.");
+            }
+
+
+            // 명확하게 비교하려면 === 연산자를 사용한다. type까지 비교함.
+            //<<@= 밑에 if에 undefined에 == 두개로 검사하면 출력된다. =@>>
+            if (nullVar === null) {  // 참
+                console.log("nullVar는 null이다.");
+            }
+            if (nullVar === undefined) { // 거짓
+                console.log("nullVar는 undefined이다.");
+            }
+        </script> 
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자바스크립트</title>
+    </head>
+
+    <body>
+
+
+    <script>
+
+        // 1. 반복 alert 출력 
+        // for(var i = 0; i < 5; i++) {
+        //     alert();
+        // }
+
+        // 2. 합구하기 
+        var array = [5, 4, 23, 7, 11, 10, 15, 20, 15, 8];
+
+        var sum = 0;
+        for(var value of array) {
+            sum += value;
+        }
+
+        console.log(sum);
+
+        // 3. 값 출력 하기 
+
+        var goods = {"name": "육개장", "price": 1300, "expirationDate":"2021/07/04"};
+        
+        var string = "";
+
+        string += "제품 : " + goods["name"];
+        string += " 가격 : " + goods["price"] + "원";
+        string += " 유통기한 : " + goods["expirationDate"];
+
+        console.log(string);
+
+        // 4. 맛집 리스트 
+
+        var restaurantList = [
+            {"name":"토속촌", "memu":"한식", "location":"서울 종로구"}, 
+            {"name":"아이러브떡볶이", "memu":"분식", "location":"서울 중구"}, 
+            {"name":"영동족발", "menu":"고기", "location":"서울 서초구"}, 
+            {"name":"연돈", "menu":"일식", "location":"제주도"}, 
+            {"name":"쿠이", "menu":"양식", "location":"부산"},
+            {"name":"하남돼지집", "menu":"고기", "location":"성남시 분당구"}
+        ];
+
+        var string = "";
+
+        for(var restaurant of restaurantList) {
+            if(restaurant["menu"] != "고기") {
+                string += "상호명 : " + restaurant["name"] + " 위치 : " + restaurant["location"] + "<br>";
+            }
+        }
+
+        document.write(string);
+
+    </script>
+    </body>
+</html>

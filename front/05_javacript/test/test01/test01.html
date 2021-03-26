@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자바스크립트</title>
+    </head>
+
+    <body>
+
+        <script>
+
+            // 1. 변수 alert 출력 
+
+            var number1 = 5; 
+            var number2 = 8;
+
+            alert(number1 + " X " + number2 + " = " + (number1 * number2));
+
+            // 2. 변수 console 출력 
+
+            var number1 = 12;
+            var number2 = 34;
+
+            console.log(number1 + "" + number2);
+
+            // 3. 변수 비교 
+
+            var number1 = 10;
+            var number2 = "10";
+
+            if(number1 === number2) {
+                console.log("두 변수는 같다.");
+            } else {
+                console.log("두 변수는 같지 않다.");
+            }
+
+            // 4. 변수 비교 
+
+            let score;
+            let number = null;
+
+            console.log((score == number));
+
+            // 5. 경고 창
+
+            var userId = "hagulu";
+
+            if(userId == null || userId == "") {
+                alert("비 정상적인 접근입니다.")
+            } else {
+                alert("안녕하세요 " + userId + "님");
+            }
+
+            // 6. 지역 변수
+            var word1 = "hello";
+            let word2;
+
+            if(word1 == "hello") {
+                word2  = "world";
+            }
+
+            console.log(word1 + " " +  word2);
+
+        </script>
+    </body>
+
+</html>

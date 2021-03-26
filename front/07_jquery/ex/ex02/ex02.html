@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <title>제목</title> 
+
+        <link rel="stylesheet" href="./style.css" type="text/css">
+
+        <!-- jQuery CDN link -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+        <!-- 스크립트의 위치는 head 태그 안에 있을 수도 있다. -->
+        <script>
+        // ready 함수: DOM tree가 모두 구성된 후 불려지는 함수
+        $(document).ready(function() {
+            // (1) radio
+            $('input[name="animal"]').change(function() {
+                //alert("변경됨");
+
+                // check된 값 찾기
+                var value = $('input[name="animal"]:checked').val();
+                alert(value);
+            });
+
+            $('#likeCatBtn').on('click', function(e) {
+                $('#cat').prop('checked', true);
+            });
+
+            $('#likeCancelBtn').on('click', function(e) {
+                $('input[name="animal"]').prop('checked', false);
+            });
+
+
+            // (2) select
+            $("#site").change(function() {
+                //alert("바뀜");
+                var selectedVal = $("#site option:selected").val();
+                if (selectedVal == 'naver') {
+                    location.href = "http://naver.com";
+                } else if (selectedVal == 'daum') {
+                    location.href = "http://daum.net";
+                } else if (selectedVal == 'google') {
+                    location.href = "http://google.com";
+                } else if (selectedVal == 'nate') {
+                    location.href = "http://nate.com";
+                }
+            });
+        });
+        </script>
+    </head> 
+    <body> 
+        좋아하는 동물을 하나만 선택하세요: 
+        <label><input type="radio" name="animal" id="dog" value="dog">개</label>
+        <label><input type="radio" name="animal" id="cat" value="cat">고양이</label>
+        <label><input type="radio" name="animal" id="lion" value="lion">사자</label>
+        <br><br>
+        <button type="button" id="likeCatBtn">고양이를 선택하는 버튼</button><br>
+        <button type="button" id="likeCancelBtn">선택 해제 버튼</button><br>
+
+        <hr>
+
+        주소 이동:
+        <select id="site">
+            <!-- option 태그에 value속성을 넣지 않으면 태그안에 들어간 문자가 value가 된다.-->
+            <option>선택하기</option>
+            <option value="naver">네이버</option>
+            <option value="daum">다음</option>
+            <option value="google">구글</option>
+            <option value="nate">네이트</option>
+        </select>
+    </body> 
+</html>

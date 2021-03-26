@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <title>html 과 자바스크립트</title> 
+    </head> 
+    <body> 
+        <h1 class="class-h1">Hello World!</h1> 
+        <div class="class-div" id="contents"> 
+            <p class="class-p" id="p1" name="p_name">내 이름은 OO이다.</p> 
+            <p class="class-p" id="p2" name="p_name">내 이름은 ㅁㅁ이다.</p> 
+            <a class="class-a" href="https://marondal.com" target="_blank">마론달로 이동</a> 
+        </div> 
+
+        <script>
+            // id로 node 가져오기 : id는 하나이므로 한개의 노드를 얻는다.
+            let p1 = document.getElementById('p1');
+            console.log(p1);
+            p1.innerText = "바뀐 텍스트";
+
+            // class로 node들 가져오기
+            let pClasses = document.getElementsByClassName('class-p');
+            console.log(pClasses);
+            // pClasses[1].innerText = "바뀐 텍스트2";
+
+            // 태그명으로 node들 가져오기
+            let divTags = document.getElementsByTagName('div');
+            console.log(divTags);
+            // divTags[0].innerHTML = "와장창";
+
+            // name 속성값을 가진 node들 가져오기
+            let pNames = document.getElementsByName('p_name');
+            console.log(pNames);
+            // pNames[0].innerText = "바뀐 텍스트4";
+        </script>
+    </body> 
+</html>

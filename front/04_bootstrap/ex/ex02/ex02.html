@@ -1,0 +1,98 @@
+<!--<<@= 예제1에 있던 내용을 복붙해온다. =@>>-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>레이아웃</title>
+        <!-- 문서 인코딩 종류 -->
+        <meta charset="utf-8"></meta>
+
+        <!-- 외부 스타일시트 정의-->
+        <link rel="stylesheet" href="./style.css" type="text/css">
+
+        <!-- bootstrap CDN link -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- container: 어느정도 width를 잡아준다. 검사 > .container 속성 보기  -->
+        <div id="wrap" class="container">
+            <header class="overflow-auto bg-dark">
+                <!--<<@=  
+                    h2에 마진을 주면 header가 마진이 들어가는 문제가 생긴다.  =>  마진상쇄
+                    마진상쇄: 마진 영역끼리 부딪혔을 때 20 + 20이 아니라 20이 되도록 상쇄시켜주는 기능
+                       => 부모와 1차 하위 자식이 모두 block일 때 상위 마진이 더 큰쪽을 택한다.
+                       => 그래서 padding으로 처리를 하거나 첫번째 요소를 인라인으로 변경 
+                       => 그냥 결과물을 보고 적용할 것
+                =@>>-->
+                <h2 class="text-center mt-4">Marondal</h2>
+            </header>
+            <nav class="bg-warning d-flex align-items-center">
+                <ul class="nav w-100 justify-content-around">
+                    <li class="nav-item"><a href="#" class="text-dark font-weight-bold d-block">메일</a></li>
+                    <li class="nav-item"><a href="#" class="text-dark font-weight-bold">카페</a></li>
+                    <li class="nav-item"><a href="#" class="text-dark font-weight-bold">블로그</a></li>
+                    <li class="nav-item"><a href="#" class="text-dark font-weight-bold">지식인</a></li>
+                    <li class="nav-item"><a href="#" class="text-dark font-weight-bold">쇼핑</a></li>
+                    <li class="nav-item"><a href="#" class="text-dark font-weight-bold">부동산</a></li>
+                </ul>
+            </nav>
+            <!-- flex는 열12칸 기반이다. -->
+            <section class="contents d-flex">
+                <section class="content1 col-8">
+                    <!--<<@= 높이 종류: bootstrap 문서 사이트 - sizing 검색
+                             여기서 높이를 주는 이유는 부모 요소 안에 비율로 채우기 위함
+                        =@>>-->
+                    <article class="h-50">
+                        <div class="d-flex p-3">
+                            <div class="col-3 mr-2">
+                                <img src="https://www.sjpost.co.kr/news/photo/202007/53199_48342_4214.jpg" width="170px" height="115px">
+                            </div>
+                            <div class="col-9 ml-2">
+                                <strong class="text-info">디자인</strong><br>
+                                <strong>'힐링 제격' 한적한 소도시에 위치한 로컬 상점</strong><br>
+                                <small>동양적인 미감과 자연의 먹거리를 한 곳에 남해 앵강고개를 넘어 해안도로를 지난 
+                                    어느 한적한 동네에 정겨운 온기를 품은 작은 가게가 있다. 남해 남쪽의 '앵강만'에서 이름을 따온...</small>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="h-50">
+                        <div class="d-flex p-3">
+                            <div class="col-3 mr-2">
+                                <img src="https://cdn.pixabay.com/photo/2019/08/01/12/36/illustration-4377408_960_720.png" width="170px" height="115px">
+                            </div>
+                            <div class="col-9 ml-2">
+                                <strong class="text-info">디자인</strong><br>
+                                <strong>'힐링 제격' 한적한 소도시에 위치한 로컬 상점</strong><br>
+                                <small>동양적인 미감과 자연의 먹거리를 한 곳에 남해 앵강고개를 넘어 해안도로를 지난 
+                                    어느 한적한 동네에 정겨운 온기를 품은 작은 가게가 있다. 남해 남쪽의 '앵강만'에서 이름을 따온...</small>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <aside class="col-4">
+                    <div class="m-3">
+                        <small>marondal을 더 안전하고 편리하게 이용하세요.</small>
+                        <a href="#" class="btn btn-warning w-100 m-2">
+                            Marondal 로그인
+                        </a>
+                        <div class="d-flex justify-content-between">
+                            <a href="#" class="text-dark">아이디 / 비밀번호 찾기</a>
+                            <a href="#" class="text-dark">회원가입</a>
+                        </div>
+                        <div class="m-2">
+                            <img src="https://ssl.pstatic.net/tveta/libs/1327/1327462/966040a7ee2ae0498031_20210224152217518.jpg" width="300px" height="150px">
+                        </div>
+                    </div>
+                </aside>
+            </section>
+            <footer class="">
+                <div class="text-center mt-5">
+                    Copyright © 2021 marondal. All rights reserved.
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

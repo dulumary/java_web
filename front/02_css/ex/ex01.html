@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>내부 스타일시트 적용하기</title>
+        <!-- 문서 인코딩 종류 -->
+        <meta charset="utf-8"></meta>
+
+        <!-- HTML 파일 내에 스타일시트 정의-->
+        <style>
+            /* 문서 전체에 효과 주기 */
+            * {color:#cc3300;}
+
+            /* 태그에 꾸미기 효과 주기 */
+            h3 {color:#cc3300; text-align: center; }
+            body {background-color: #bbb;}
+            span {color:#0055ff; font-size: 28px; font-weight: bold;}
+            a {text-decoration: none; color:#000;}  /* text-decoration:none  => 밑줄을 없앤다 */
+
+            /* id에 꾸미기 효과 주기 */
+            #text1 {color:coral; font-size: 16px;}
+            #text2 {color:darkgreen; font-size:14px; font-style: italic;}
+
+            #text3 {color:purple; font-size:20px;}
+
+            /* class에 꾸미기 효과 주기 */
+            .bg-yellow {background-color: yellow;}
+            .text-color-white {color:#fff;}
+        </style>
+    </head>
+    <body>
+        그냥 글씨를 써봅니다.
+
+        <h3>스타일시트 내용이 적용된 제목입니다.</h3>
+
+        <!-- 글씨를 담는 태그 -->
+        <span>글씨가 들어가는 span 태그</span><br>
+        <span>span 태그</span><br>
+
+        <!-- 앵커(Anchor) 태그 -->
+        <a href="http://marondal.com">마론달 사이트로 갑니다!</a><br/>
+
+        <!-- id 속성: 태그에 '유일한 이름'을 지정해준다.(중복 되지 않음) -->
+        <span id="text1">글씨 효과를 개별로 주고싶다</span><br/>
+        <span id="text2">이번 글씨에는 또다른 효과를 준다.</span><br/>
+
+        <!-- class 속성: 태그에 '별명'을 지정해준다.(중복 가능) -->
+        <span class="bg-yellow">글자 배경이 노란색으로 칠해지는 효과를 준다.</span><br>
+        <span id="text3" class="bg-yellow ">text3 효과와 글자 배경이 노란색으로 칠해지는 효과</span><br>
+        <span class="text-color-white bg-yellow">글자색 흰색, 배경색 노란색</span><br>
+
+        <!-- 인라인 스타일 주기 -->
+        <span style="color:limegreen;">안녕하세요</span><br/>
+          <!-- 인라인 스타일이 우선순위가 가장 높다. -->
+        <span class="text-color-white bg-yellow" style="color:limegreen;">안뇽</span>
+    </body>
+</html>

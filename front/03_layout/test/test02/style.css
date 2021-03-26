@@ -1,0 +1,21 @@
+*{margin:auto}
+
+.wrap {max-width:1200px}
+header {background-color: cadetblue; display:flex}
+
+header > .logo {width:200px; height:100px; background-color: chocolate;}
+header > .menu {flex-grow:1; height:100px; background-color:cornflowerblue;}
+
+.main-section {display:flex;}
+
+.main-section > .left-section {flex-grow: 1; height:400px; background-color:gold}
+
+.main-section > .right-section {flex-grow:1; background-color:pink; height:400px}
+.main-section > .right-section > .top-article {background-color:purple; height:50%;}
+.main-section > .right-section > .bottom-article {background-color:springgreen; height:50%}
+
+footer {display:flex; background-color: gray; height:80px}
+footer > .footer-left {width:200px; height:80px; background-color: lightsalmon;}
+footer > .copyright {flex-grow:1; height:80px; background-color:lightgreen;}
+footer > .footer-right {width:200px; height:80px; background-color: lightsalmon;}
+

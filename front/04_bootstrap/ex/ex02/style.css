@@ -1,0 +1,14 @@
+/*#wrap {height:1000px;}   마지막에 높이를 없앤다. */
+
+header {height:100px;}
+
+nav {height:50px;}
+
+.contents {height:300px;}
+.contents > .content1 {height:300px;}
+.contents > aside {height:300px;}
+
+footer {height:100px;}
+
+a {text-decoration: none; }
+a:hover {text-decoration: none !important;}

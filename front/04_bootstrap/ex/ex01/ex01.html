@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>레이아웃</title>
+        <!-- 문서 인코딩 종류 -->
+        <meta charset="utf-8"></meta>
+
+        <!-- 외부 스타일시트 정의-->
+        <link rel="stylesheet" href="./style.css" type="text/css">
+
+        <!-- bootstrap CDN link -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- container: 어느정도 width를 잡아준다. 검사 > .container 속성 보기  -->
+        <div id="wrap" class="container bg-secondary">
+            <header class="bg-primary">
+
+            </header>
+            <nav class="bg-success">
+
+            </nav>
+            <!-- flex는 열12칸 기반이다. -->
+            <section class="contents bg-white d-flex">
+                <section class="content1 bg-info col-8">
+                    <!--<<@= 높이 종류: bootstrap 문서 사이트 - sizing 검색
+                             여기서 높이를 주는 이유는 부모 요소 안에 비율로 채우기 위함
+                        =@>>-->
+                    <article class="bg-warning h-50">
+
+                    </article>
+                    <article class="bg-success h-50">
+
+                    </article>
+                </section>
+                <aside class="bg-danger col-4">
+
+                </aside>
+            </section>
+            <footer class="bg-dark">
+
+            </footer>
+        </div>
+    </body>
+</html>

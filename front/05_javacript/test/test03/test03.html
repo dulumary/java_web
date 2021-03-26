@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>자바스크립트</title>
+    </head>
+    <body>
+
+        <script>
+            // 1. 길이 제한 
+            var userId = "my_id_very_simple";
+
+            if(userId.length > 8) {
+                alert("id는 8자를 넘길 수 없습니다. " + userId.slice(0, 8));
+            }
+
+            // 2. 파일 이름
+            var path = "/Users/master/Document/image/city.jpg";
+            var array = path.split("/");
+
+            console.log(array[array.length - 1]);
+
+            // 3. 데이터 정리 
+            var info = {
+                "name":"김 인규",
+                "phoneNumber":"01012345678",
+                "introduce":"    안녕하세요. 저는 기분이 좋네요.  "
+            };
+
+            var string = "";
+
+            string += "이름 : " + info["name"].replace(" ", "");
+            string += " 전화번호 : " + info["phoneNumber"].slice(0,3) + "-" + info["phoneNumber"].slice(3,7) + "-" + info["phoneNumber"].slice(7,11);
+            string += " 소개 : " + info["introduce"].trim();
+
+            console.log(string);
+
+            // 4. 문자열 데이터 
+
+            var membersString = "루피:19931005,조로:19890513,나미:19970705,쵸파:20040932";
+            var membersArray = membersString.split(",");
+
+            var memberInfoArray = [];
+
+            for(var member of membersArray) {
+                let infoArray = member.split(":");
+                memberInfoArray.push({"name":infoArray[0] , "birth":infoArray[1] });
+            }
+
+            console.log(memberInfoArray);
+
+            // 5. 생월 찾기
+            
+            for(var memberInfo  of memberInfoArray) {
+                var month = memberInfo["birth"].slice(4, 6);
+                if(month == 7) {
+                    console.log(memberInfo["name"]);
+                }
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+.box-size-100 {width:100px; height:100px; }
+/* padding 속성은 컨텐츠 안에 여백을 주면서 상자가 커진다.(레이아웃에선 잘안씀) */
+#div1 {background-color: darkorange; margin-bottom: 20px; padding:10px;}
+#div2 {background-color:mediumseagreen}
+
+#div3 {background-color:orchid;}
+#div4 {background-color:skyblue;}
+
+/*<<@= 
+1. flex만 붙여보기
+2. 백그라운드 컬러 넣기 (전체 row 영역 차지)
+3. justify-content : 정렬 위치(center, start, end, space-between), 
+=@>>*/
+.flex-row {display:flex; background-color: yellow; justify-content: center;}
+
+/* 인라인을 블록 속성으로 변경 */
+.text1 {background-color:chartreuse; display:block; margin-top:60px; padding-top:20px;}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>div 태그 사용하기</title>
+        <!-- 문서 인코딩 종류 -->
+        <meta charset="utf-8"></meta>
+
+        <!-- 외부 스타일시트 정의-->
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <!--<<@= 
+            - div1 - margin: 상자 두개를 떼어낸다. 
+            - 상자에 padding 
+            - span에 padding
+            =@>>-->
+        <!-- div는 block 타입이라 다음 요소가 아래로 내려간다.-->
+        <div id="div1" class="box-size-100">상자</div>
+        <div id="div2" class="box-size-100"></div>
+
+        <!-- flex: div 옆에 붙이기 -->
+        <div class="flex-row"> 
+            <div id="div3" class="box-size-100"></div>
+            <div id="div4" class="box-size-100"></div>
+        </div>
+
+        <!-- 인라인 태그 -->
+        <span class="text1">span 태그에 글씨를 쓴다.</span>
+    </body>
+</html>

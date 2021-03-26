@@ -1,0 +1,16 @@
+table { width: 800px; height:200px}
+
+input {width:145px; height:30px; font-size: large;}
+
+th {background-color: skyblue; height:30px}
+td {text-align: center;}
+
+tr:hover {background-color:paleturquoise}
+
+.input-label {font-size:large}
+
+.total-account{text-align: right;}
+.total-tr {background-color:powderblue;}
+
+.save-button-p {width:800px}
+.save-button {width:800px; height:40px; font-size: large;}
