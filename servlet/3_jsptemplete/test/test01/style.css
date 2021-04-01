@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+header {height:80px}
+nav {height:50px}
+footer {height:100px}
+
+ul li a {color:white}
+ul li a:hover {color:#eeeeee; text-decoration:none}

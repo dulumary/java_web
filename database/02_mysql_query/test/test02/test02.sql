@@ -1,16 +1,14 @@
 # 1. 리뷰 등록
 
-INSERT INTO `review` 
-(
+INSERT INTO `review` (
     `store`, 
     `menu`,
     `userName`,
     `point`,
     `review`, 
-    `createAt`, 
-    `updateAt`
-)
-VALUE (
+    `createdAt`, 
+    `updatedAt`
+) VALUE (
     '버거킹',
     '와퍼세트', 
     '이정재',
@@ -39,20 +37,17 @@ VALUE (
 )
 
 
-
-
 # 2. 별점 등록 
 
-INSERT INTO `review` 
-(
+INSERT INTO `review` (
     `store`, 
     `menu`,
     `userName`,
     `point`,
-    `createAt`, 
-    `updateAt`
+    `createdAt`, 
+    `updatedAt`
 )
-VALUE (
+VALUES (
     '안동찜닭',
     '찜닭(중)', 
     '강동원',

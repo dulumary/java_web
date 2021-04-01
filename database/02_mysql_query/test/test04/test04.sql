@@ -14,7 +14,7 @@ SELECT count(*) FROM `review` WHERE `userName` = '전지현' AND `store` = 'BHC'
 
 # 4. 날짜 조건
 
-SELECT * FROM `review` WHERE `userName` = '강동원' AND `createAt` > '2021-03-11';
+SELECT * FROM `review` WHERE `userName` = '강동원' AND `createdAt` >= '2025-03-11 00:00:00';
 
 # 5. 복합 조건
 
