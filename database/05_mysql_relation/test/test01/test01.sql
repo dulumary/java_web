@@ -16,8 +16,8 @@ CREATE TABLE `student` (
     `id` int NOT NULL AUTO_INCREMENT primary key,
     `name` varchar(32) NOT NULL,
     `phoneNumber` varchar(12) NOT NULL,
-    `grade` tinyint NOT NULL,
-    `class` tinyint NOT NULL, 
+    `email` varchar(64) NOT NULL,
+    `dreamJob` varchar(16) NOT NULL, 
     `createdAt` timestamp DEFAULT CURRENT_TIMESTAMP,
     `updatedAt` timestamp DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -25,7 +25,7 @@ CREATE TABLE `student` (
 # 2. Insert 
 
 INSERT INTO `student` (
-    `name`, `phoneNumber`, `grade`, `class`, `createdAt`, `updatedAt`
+    `name`, `phoneNumber`, `email`, `dreamJob`, `createdAt`, `updatedAt`
 ) 
 VALUES ('유재석', '01000001111', 3, 2, now(), now()),
 ('조세호', '01011110000', 3, 2, now(), now());
@@ -46,5 +46,5 @@ VALUES (1, 2020, 1, '중간고사', '국어', 80, now(), now()),
 
 SELECT `id`, `name` FROM `student` WHERE `name` = '조세호';
 
-SELECT '조세호', `year`, `semester`, `term`, `subject`, `score` FROM `new_score` WHERE `studentId` = 2;
+SELECT `year`, `semester`, `term`, `subject`, `score` FROM `new_score` WHERE `studentId` = 2;
 

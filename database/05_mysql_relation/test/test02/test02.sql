@@ -26,7 +26,7 @@ CREATE TABLE `store` (
 # 2. Insert 
 
 INSERT INTO `store` (
-    `name`, `phoneNumber`, `address`, `businessNumber`, `introduce`, `createdAt`, `updatedAt`)
+    `name`, `phoneNumber`, `address`, `businessNumber`, `introduce`, `createdAt`, `updatedAt`
 )
 VALUES ("교촌치킨", '02-000-0000', '서울시 서초구', '111-111-1111', '항상 맛있는 닭을 선사 합니다.', now(), now()),
 ("BHC", '02-111-0000', '서울시 서초구', '111-222-1111', '전지현씨 BHC', now(), now()),
@@ -36,15 +36,15 @@ SELECT * FROM `store`;
 
 INSERT INTO `new_review` (
     `storeId`, `menu`, `userName`, `point`, `review`, `createdAt`, `updatedAt`
-) VALUES (1, '오리지날 콤보', '이병헌', 4.5, '콤보는 항상 진리입니다.'),
-(2, '핫후라이드', '전지현', 5, NULL),
-(2, '뿌링클', '이정재', 3.5, '내가 뿌링클 상인가?'),
-(3, '와퍼세트', '이병헌', 4.0, '패티 너무좋아요'),
-(1, '오리지날 콤보', '맛있으면짖는개', 4.5, '왈왈왈!! 왈왈!'),
-(2, '뿌링클', '전지현', 5, NULL);
+) VALUES (1, '오리지날 콤보', '이병헌', 4.5, '콤보는 항상 진리입니다.', now(), now()),
+(2, '핫후라이드', '전지현', 5, NULL, now(), now()),
+(2, '뿌링클', '이정재', 3.5, '내가 뿌링클 상인가?', now(), now()),
+(3, '와퍼세트', '이병헌', 4.0, '패티 너무좋아요', now(), now()),
+(1, '오리지날 콤보', '맛있으면짖는개', 4.5, '왈왈왈!! 왈왈!', now(), now()),
+(2, '뿌링클', '전지현', 5, NULL, now(), now());
 
-# 3. 성적 출력
+# 3. 리뷰 출력
 
 SELECT `id`, `name` FROM `store` WHERE `name` = '교촌치킨';
 
-SELECT '교촌치킨', `point`, `review`, `userName` FROM `new_review` WHERE `storeId` = 1;
+SELECT `point`, `review`, `userName` FROM `new_review` WHERE `storeId` = 1;

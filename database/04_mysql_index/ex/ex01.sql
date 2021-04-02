@@ -26,8 +26,8 @@ CREATE TABLE `student` (
   `number` char(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- UNIQUE KEY 추가
-ALTER TABLE `student` ADD INDEX `index_number` (`number`) USING BTREE;
+-- UNIQUE KEY 추가 (number 컬럼에서는 중복값이 들어 갈수 없다.)
+ALTER TABLE `student` ADD UNIQUE INDEX `index_number` (`number`) USING BTREE;
 
 -- 일반 인덱스 추가
 ALTER TABLE `student` ADD INDEX `idx_department` (`department`);
