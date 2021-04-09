@@ -35,8 +35,6 @@ select distinct `name` from entrant;
 # 자격증 종류(중복 제거)
 select `license` from entrant group by `license`;
 
-
-#<<@= group by에서는 합계 또는 카운트를 구할 수 있다. =@>>
 -- 사람 별 응시 시험 개수 구하기 (행 자체가 응시 시험 종류이다.)
 select `name`, COUNT(1) from entrant
 group by `name`;
