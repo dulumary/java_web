@@ -44,6 +44,11 @@ SELECT * FROM `user` WHERE `introduce` is null;
 # 자기소개가 없는(NULL이 아닌) 데이터 조회
 SELECT * FROM `user` WHERE `introduce` is not null;
 
+# id가 3, 4, 5, 6번인 데이터 조회
+SELECT * FROM `user`
+WHERE `id` in (3, 4, 5, 6);
+
+
 -- 조건이 여러가지인 경우 - 논리 연산자 사용
 # id가 3번이거나 4번인 데이터 조회
 SELECT * FROM `user` WHERE `id` = 3 OR `id` = 4;
