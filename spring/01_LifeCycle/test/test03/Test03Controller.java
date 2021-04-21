@@ -1,4 +1,4 @@
-package com.hagulu.lesson01.controller;
+package com.hagulu.test.lesson01;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,4 +1,4 @@
-package com.hagulu.lesson01.controller;
+package com.hagulu.test.lesson01;
 
 import java.util.ArrayList;
 import java.util.HashMap;
