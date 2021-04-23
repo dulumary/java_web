@@ -40,8 +40,8 @@ public class ReviewController {
 		review.setPoint(4.0);
 		review.setReview("역시 뿌리클은 진리 입니다!!");
 		
-//		int row = reviewBO.insertReview(review);
-		int row = reviewBO.insertReviewAsField(4, "콤비네이션피자", "김바다", 4.5, "할인도 많이 받고 잘먹었습니다.");
+//		int row = reviewBO.addReview(review);
+		int row = reviewBO.addReviewAsField(4, "콤비네이션피자", "김바다", 4.5, "할인도 많이 받고 잘먹었습니다.");
 		
 		return "insert 성공 " + row;
 		

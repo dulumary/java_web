@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.hagulu.test.lesson02.model.Seller;
+import com.hagulu.test.lesson02.model.Store;
 
 @Repository
-public interface SellerDAO {
+public interface StoreDAO {
 
-	public List<Seller> selectSeller();
+	public List<Store> selectSeller();
 }

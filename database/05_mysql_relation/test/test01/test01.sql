@@ -12,7 +12,7 @@ CREATE TABLE `new_score` (
     `updatedAt` timestamp DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET= utf8mb4;
 
-CREATE TABLE `student` (
+CREATE TABLE `new_student` (
     `id` int NOT NULL AUTO_INCREMENT primary key,
     `name` varchar(32) NOT NULL,
     `phoneNumber` varchar(12) NOT NULL,
@@ -24,13 +24,13 @@ CREATE TABLE `student` (
 
 # 2. Insert 
 
-INSERT INTO `student` (
-    `name`, `phoneNumber`, `email`, `dreamJob`, `createdAt`, `updatedAt`
-) 
-VALUES ('유재석', '01000001111', 3, 2, now(), now()),
-('조세호', '01011110000', 3, 2, now(), now());
+insert into `new_student`
+(`name`, `phoneNumber`, `email`, `dreamJob`, `createdAt`, `updatedAt`)
+values
+('유재석', '01000001111', 'mc_u@naver.com', '래퍼', now(), now()),
+('조세호', '01011110000', 'josep@gmail.com', '변호사', now(), now());
 
-SELECT * from `student`;
+SELECT * from `new_student`;
 
 INSERT INTO `new_score` (
     `studentID`, `year`, `semester`, `term`, `subject`, `score`, `createdAt`, `updatedAt`
@@ -44,7 +44,7 @@ VALUES (1, 2020, 1, '중간고사', '국어', 80, now(), now()),
 
 # 3. 성적 출력
 
-SELECT `id`, `name` FROM `student` WHERE `name` = '조세호';
+SELECT `id`, `name` FROM `new_student` WHERE `name` = '조세호';
 
 SELECT `year`, `semester`, `term`, `subject`, `score` FROM `new_score` WHERE `studentId` = 2;
 

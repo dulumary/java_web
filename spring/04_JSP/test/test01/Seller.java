@@ -1,11 +1,10 @@
-package com.hagulu.test.lesson02.model;
+package com.hagulu.test.lesson04.model;
 
 public class Seller {
 	private int id;
 	private String nickname;
 	private String profileImageUrl;
 	private double temperature;
-	
 	
 	public int getId() {
 		return id;

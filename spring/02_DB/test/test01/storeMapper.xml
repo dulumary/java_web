@@ -3,12 +3,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
- <mapper namespace="com.hagulu.test.lesson02.dao.SellerDAO">
- 	<select id="selectSeller" resultType="com.hagulu.test.lesson02.model.Seller">
+ <mapper namespace="com.hagulu.test.lesson02.dao.StoreDAO">
+ 	<select id="selectSeller" resultType="com.hagulu.test.lesson02.model.Store">
  		SELECT
  			*
 		FROM
-			`seller`
+			`store`
  	</select>
  
  </mapper>

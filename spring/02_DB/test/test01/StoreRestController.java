@@ -6,17 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hagulu.test.lesson02.bo.SellerBO;
-import com.hagulu.test.lesson02.model.Seller;
+import com.hagulu.test.lesson02.bo.StoreBO;
+import com.hagulu.test.lesson02.model.Store;
 
 @RestController
-public class SellerRestController {
+public class StoreRestController {
 	
 	@Autowired
-	private SellerBO sellerBO;
+	private StoreBO storeBO;
 
 	@RequestMapping("/lesson02/test01")
-	public List<Seller> test01() {
-		return sellerBO.getSeller();
+	public List<Store> test01() {
+		return storeBO.getSeller();
 	}
 }

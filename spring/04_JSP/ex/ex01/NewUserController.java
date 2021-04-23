@@ -33,7 +33,7 @@ public class NewUserController {
 			@RequestParam(value = "introduce", required = false) String introduce,
 			@RequestParam("email") String email) {
 	
-		int row = newUserBO.insertNewUser(name, yyyymmdd, email, introduce);
+		newUserBO.addNewUser(name, yyyymmdd, email, introduce);
 		
 		return "lesson04/afterAddUser";	// 결과 jsp
 	}

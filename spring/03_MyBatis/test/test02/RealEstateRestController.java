@@ -62,7 +62,7 @@ public class RealEstateRestController {
 		realEstate.setType("매매");
 		realEstate.setPrice(100000);
 		
-		int row = realEstateBO.insertRealEstate(realEstate);
+		int row = realEstateBO.addRealEstate(realEstate);
 		
 		return "insert 성공 : " + row;
 	}
@@ -73,7 +73,7 @@ public class RealEstateRestController {
 	@RequestMapping("/test02/2")
 	public String test02_2(@RequestParam(value="realtorid") int realtorId) {
 		
-		int row = realEstateBO.insertRealEstateAsField(realtorId, "썅떼빌리버 오피스텔 814호", 45, "월세", 100000, 120);
+		int row = realEstateBO.addRealEstateAsField(realtorId, "썅떼빌리버 오피스텔 814호", 45, "월세", 100000, 120);
 		return "insert 성공 : " + row;
 	}
 

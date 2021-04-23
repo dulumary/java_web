@@ -37,12 +37,12 @@ public class RealEstateBO {
 	// INSERT 다루기 
 	
 	// 1. 객체로 insert 하기 
-	public int insertRealEstate(RealEstate realEstate) {
+	public int addRealEstate(RealEstate realEstate) {
 		return realEstateDAO.insertRealEstate(realEstate);
 	}
 	
 	// 2. field로 insert 하기 
-	public int insertRealEstateAsField(
+	public int addRealEstateAsField(
 			int realtorId, String address, int area, String type, int price, int rentPrice) {
 		
 		return realEstateDAO.insertRealEstateAsField(realtorId, address, area, type, price, rentPrice);
