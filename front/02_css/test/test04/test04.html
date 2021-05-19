@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>가계부</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <h1>2021년 3월 가계부</h1>
+        <table class="table-account-book">
+            <thead>
+                <tr>
+                    <th>날짜</th>
+                    <th>사용처</th>
+                    <th>결제</th>
+                    <th>가격</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3월 4일</td>
+                    <td>식재료 쇼핑</td>
+                    <td>신한카드</td>
+                    <td>87,000원</td>
+                </tr>
+                <tr>
+                    <td>3월 2일</td>
+                    <td>기름 주유</td>
+                    <td>국민 카드</td>
+                    <td>50,000원</td>
+                </tr>
+                <tr>
+                    <td>3월 2일</td>
+                    <td>떡볶이</td>
+                    <td>현금</td>
+                    <td>12,000원</td>
+                </tr>
+
+                <tr class="total-tr">
+                    <td>합계</td>
+                    <td class="total-account" colspan="3">149,000원</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <p>
+            <span class="input-label">날짜 : </span><input type="text" >  <span class="input-label">사용처 : </span><input type="text">
+            <span class="input-label">결제 : </span><input type="text">  <span class="input-label"> 가격 : </span><input type="text"> 
+        </p>
+        <p class="save-button-p">
+            <button type="button" class="save-button">저장하기</button>
+        </p>
+        
+    </body>
+
+</html>

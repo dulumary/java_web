@@ -1,0 +1,14 @@
+
+.wrap {width:1200px; margin: auto;}
+
+header > .search {height:120px; width:300px}
+header > .search > .searchbar {width:250px}
+header > .logo{height:120px; width:600px }
+header >  .user{height:120px; width:300px}
+
+.nav-item > .nav-link {font-size:18px; color:black; background-color:#dededede;}
+.nav-item > .nav-link:hover {color:gray}
+
+.nav-item > .small-link {font-size:13px; color:gray; background-color: white;}
+
+address {font-size:13px; color:gray}

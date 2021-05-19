@@ -1,58 +1,69 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>가계부</title>
+        <title>2023년 5월</title>
         <link href="style.css" rel="stylesheet">
     </head>
-
     <body>
-
-        <h1>2021년 3월 가계부</h1>
-        <table class="table-account-book">
+        <span class="year">2023</span> <span class="month">5</span>
+        <table class="calendar">
             <thead>
                 <tr>
-                    <th>날짜</th>
-                    <th>사용처</th>
-                    <th>결제</th>
-                    <th>가격</th>
+                    <th class="holiday">Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="day">
                 <tr>
-                    <td>3월 4일</td>
-                    <td>식재료 쇼핑</td>
-                    <td>신한카드</td>
-                    <td>87,000원</td>
+                    <td class="holiday">1 근로자의 날</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td class="holiday">5 어린이날</td>
+                    <td>6</td>
+                    <td>7</td>
                 </tr>
                 <tr>
-                    <td>3월 2일</td>
-                    <td>기름 주유</td>
-                    <td>국민 카드</td>
-                    <td>50,000원</td>
+                    <td class="holiday">8 어버이날</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
                 </tr>
                 <tr>
-                    <td>3월 2일</td>
-                    <td>떡볶이</td>
-                    <td>현금</td>
-                    <td>12,000원</td>
+                    <td class="holiday">15 스승의날</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td class="today">18 today</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
                 </tr>
-
-                <tr class="total-tr">
-                    <td>합계</td>
-                    <td class="total-account" colspan="3">149,000원</td>
+                <tr>
+                    <td class="holiday">22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td class="holiday">27 부처님오신날</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td class="holiday">29</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td colspan="4"></td>
                 </tr>
             </tbody>
 
         </table>
-
-        <p>
-            <span class="input-label">날짜 : </span><input type="text" >  <span class="input-label">사용처 : </span><input type="text">
-            <span class="input-label">결제 : </span><input type="text">  <span class="input-label"> 가격 : </span><input type="text"> 
-        </p>
-        <p class="save-button-p">
-            <button type="button" class="save-button">저장하기</button>
-        </p>
         
     </body>
-
 </html>

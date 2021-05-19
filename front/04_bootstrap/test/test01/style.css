@@ -1,4 +1,4 @@
-.wrap {max-width:1200px}
+.wrap {width:1200px; margin:auto}
 
 header {height:100px}
 header > .logo {width:200px; height:100px;}
@@ -7,7 +7,6 @@ header > .menu {height:100px;}
 .main-section {height:450px;}
 
 footer {height:80px}
-footer > .footer-left {height:80px; }
-footer > .copyright {height:80px;}
-footer > .footer-right {height:80px; }
+footer > .logo {width:200px; height:80px;}
+footer > .menu {height:80px;}
 

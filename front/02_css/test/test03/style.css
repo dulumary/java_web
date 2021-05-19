@@ -1,16 +1,12 @@
-table { width: 800px; height:200px}
+table, th, td {border: 1px solid black; border-collapse: collapse;}
 
-input {width:145px; height:30px; font-size: large;}
+th {height:30px;}
+td {vertical-align: top; width:150px; height:100px; padding:10px; font-size:15px;}
+td:hover {background-color: lightsteelblue;}
 
-th {background-color: skyblue; height:30px}
-td {text-align: center;}
+.year {font-size:20px;}
+.month {font-size:50px; font-weight: bold;}
 
-tr:hover {background-color:paleturquoise}
+.holiday {color:red}
 
-.input-label {font-size:large}
-
-.total-account{text-align: right;}
-.total-tr {background-color:powderblue;}
-
-.save-button-p {width:800px}
-.save-button {width:800px; height:40px; font-size: large;}
+.today {background-color: lightyellow; font-weight: bold;}

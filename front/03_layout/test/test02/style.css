@@ -1,21 +1,11 @@
-*{margin:auto}
 
-.wrap {max-width:1200px}
-header {background-color: cadetblue; display:flex}
+body{margin:0}
+.wrap {width:1200px; background-color: chocolate;}
 
-header > .logo {width:200px; height:100px; background-color: chocolate;}
-header > .menu {flex-grow:1; height:100px; background-color:cornflowerblue;}
+header {height:150px; display:flex; background-color: darkgreen;}
+header > .logo {width:200px;  height:150px; background-color: darkslateblue;}
+header > .gnb {width:1000px;  height:150px; background-color:hotpink;}
 
-.main-section {display:flex;}
+section {height:700px; background-color: indigo;}
 
-.main-section > .left-section {flex-grow: 1; height:400px; background-color:gold}
-
-.main-section > .right-section {flex-grow:1; background-color:pink; height:400px}
-.main-section > .right-section > .top-article {background-color:purple; height:50%;}
-.main-section > .right-section > .bottom-article {background-color:springgreen; height:50%}
-
-footer {display:flex; background-color: gray; height:80px}
-footer > .footer-left {width:200px; height:80px; background-color: lightsalmon;}
-footer > .copyright {flex-grow:1; height:80px; background-color:lightgreen;}
-footer > .footer-right {width:200px; height:80px; background-color: lightsalmon;}
-
+footer {height:100px; background-color:tomato;}

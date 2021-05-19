@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>회원 가입</title>
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <header>
+                <div class="logo"><span class="display-4 text-danger">111번가</span></div>
+            </header>
+            <hr>
+            <section class="d-flex justify-content-center">
+                <div class="join-box mt-5">
+                    <h1> 가입 정보 입력 </h1>
+
+                    <div class="sub-description my-4">111번가의 다양한 혜택을 누려 보세요!!</div>
+
+                    <label>아이디</label><input type="text" id="idInput" class="input-text form-control">
+                    <div><small id="idInfo" class="d-none text-info">아이디를 4자 이상 입력하세요.</small></div>
+
+                    <label class="mt-3">비밀 번호</label><input type="password" id="passwordInput" class="input-text form-control">
+
+                    <label class="mt-3">비밀 번호 확인</label><input type="password" id="passwordConfirmInput" class="input-text form-control">
+
+                    <label class="mt-3">이름</label><input type="text" id="nameInput" class="input-text form-control">
+
+                    <label class="mt-3">이메일</label>
+                    <div class="d-flex align-items-center">
+                        <input type="text" id="emailInput" class="input-text form-control col-6">
+                        <div class="col-1">@</div>
+                        <input type="text" id="emailCustom" class="d-none input-text form-control col-5">
+                        <select class="form-control col-5" id="emailSelctor">
+                            <option>naver.com</option>
+                            <option>daum.com</option>
+                            <option>kakao.com</option>
+                            <option>gmail.com</option>
+                            <option value="custom">직접입력</option>
+                        </select>
+                    </div>
+
+                    <button id="joinButton" class="btn btn-block btn-danger mt-4 join-button"> 가입하기 </button>
+                </div>
+
+            </section>
+
+            
+            <footer class="text-center">
+                <hr>
+                <address class="copyright"> Copyright 2021. 111st All Rights Reserved.</address>
+            </footer>
+            
+        </div>
+
+    </body>
+    <script>
+        $(document).ready(function() {
+            
+            $("#joinButton").on("click", function() {
+                if($("#idInput").val() == '') {
+                    alert("아이디를 입력하세요.");
+                   return ;
+                }
+
+                if($("#passwordInput").val() == '') {
+                    alert("비밀번호를 입력하세요.");
+                   return ;
+                }
+
+                if($("#passwordInput").val() != $("#passwordConfirmInput").val()) {
+                    alert("비밀번호가 일치하지 않습니다.");
+                    return ;
+                }
+
+                if($("#nameInput").val() == '') {
+                    alert("이름을 입력하세요.");
+                   return ;
+                }
+
+                if($("#emailInput").val() == '') {
+                    alert("이메일을 입력하세요.");
+                   return ;
+                }
+
+                if($("#emailSelctor").val() == 'custom' && $("#emailCustom").val() == '') {
+                    alert("이메일 도메인을 입력하세요.");
+                    return ;
+                }
+
+                var mailString = $("#emailInput").val() + "@";
+                if($("#emailSelctor").val() != 'custom') {
+                    mailString += $("#emailSelctor").val();
+                } else {
+                    mailString += $("#emailCustom").val();
+                }
+
+                var message = "아이디 : " + $("#idInput").val() + "\n"
+                        + "이름 : " + $("#nameInput").val() + "\n"
+                        + "이메일 : " + mailString + "\n"
+                        + "가입이 완료 되었습니다.";
+                    
+
+                alert(message);
+            });
+
+            $("#emailSelctor").on("change", function() {
+                if($(this).val() == 'custom') {
+                    $("#emailCustom").removeClass("d-none");
+                    $("#emailSelctor").addClass("d-none");
+                }
+            })
+
+            $("#idInput").keyup(function() {
+                var idString = $(this).val();
+                if(idString.length > 0 && idString.length < 5) {
+                    $("#idInfo").removeClass("d-none");
+                } else {
+                    $("#idInfo").addClass("d-none");
+                }
+            });
+    
+           
+        });
+        </script>
+
+
+
+</html>

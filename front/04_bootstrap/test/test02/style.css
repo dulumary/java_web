@@ -1,12 +1,14 @@
-.wrap {max-width:1200px}
+.wrap {width:1200px; margin:auto}
 
-header > .logo {width:200px; height:100px;}
-header > .menu {height:100px;}
+header {height:150px}
+header > .logo {height:100px;}
+header > .menu {height:50px;}
 
-.main-section {height:450px;}
-.main-section > .left-section {overflow:hidden;}
+.main-section > .content {height:600px; width:1000px}
+
+aside {height :600px; width:200px}
 
 footer {height:80px}
+footer > .logo {width:200px; height:80px;}
+footer > .menu {height:80px;}
 
-.nav-link {font-size:18px; color:cadetblue; font-weight: bold;}
-.nav-link:hover {color:teal}
