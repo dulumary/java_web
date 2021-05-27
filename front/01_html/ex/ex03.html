@@ -1,48 +1,42 @@
 <!DOCTYPE html>
+
 <html>
     <head>
-        <title>input 태그</title>
+        <title>input tag</title>
     </head>
     <body>
-        <!-- input 태그 -->
-        <b>ID</b> <input type="text"><br><br>
-        <b>Password</b> <input type="password"><br>
-        <b>Password 확인</b> <input type="password"><br><br>
-
+        <!-- 인풋 태그 -->
+        <b>이름 : </b><input type="text" placeholder="이름을 입력하세요" > <br>
+        <b>패쓰워드 : </b> <input type="password" value="asdf"><br>
+        <label>패쓰워드 확인 : </label><input type="password">
+        <br><br>
         <!-- radio button -->
-        <b>성별</b>
-        남자<input type="radio" name="gender" value="male"> 
-        여자<input type="radio" name="gender" value="female"><br><br>
+        <label>남자<input type="radio" name="gender" checked></label>
+        <label>여자<input type="radio" name="gender"></label>
+        <br><br>
+        <!-- check box -->
+        <label>독서 <input type="checkbox" checked> </label>
+        <label>게임 <input type="checkbox"> </label>
+        <label>헬스 <input type="checkbox" checked> </label>
 
-        <!-- checkbox -->
+        <!-- 파일 입력 -->
+        <input type="file">  <br><br>
 
-        <label>독서<input type="checkbox" name="hobby" value="reading"></label>
-        <label>게임<input type="checkbox" name="hobby" value="game" checked></label>
-        <label>헬스<input type="checkbox" name="hobby" value="health"></label>
-        <label>등산<input type="checkbox" name="hobby" value="mountain"></label><br><br>
-
-        <!-- file type -->
-
-        <b>프로필 사진 업로드</b> <br>
-        <input type="file"><br><br>
-
-        <!-- submit type: 데이터를 서버에 전송하는 버튼 -->
-        <input type="submit" value="작성 완료">
-
-        <hr>
-
-        <!-- 일반 버튼 -->
-        <button type="button">버튼</button> <br><br>
-
-        <!-- select 태그: selected를 넣으면 항목이 기본 선택됨 -->
-        <b>좋아하는 과일은?</b>
+        <!-- 버튼 -->
+        <button type="button"> 안녕</button>
+        <br><br>
+        <!-- 셀렉트 인풋   -->
         <select>
-           <option>선택</option>
-           <option>사과</option>
-           <option selected>바나나</option>
-           <option>딸기</option>
-           <option>블루베리</option>
+            <option>사과</option>
+            <option>바나나</option>
+            <option selected>딸기</option>
+            <option>배</option>
         </select>
+        <br>
+        <br>
+        <!-- 텍스트 에어리어 -->
+        <textarea rows="10" cols="10">안녕하세요 저는 단란한 가정에서.... </textarea>
 
     </body>
+
 </html>

@@ -43,7 +43,7 @@
         </div>
 
         <script>
-            $( function() {
+            $(document).ready(function() {
               $( "#startDate" ).datepicker({
                     minDate:0, 
                     showButtonPanel: true, 
@@ -51,13 +51,12 @@
                     dateFormat: "yy-mm-dd",
                     dayNamesMin:['월', '화', '수', '목', '금', '토', '일'],
                     onSelect:function (dateText) {
-                        $( "#endDate" ).datepicker('option', 'minDate', dateText)
+                        $( "#endDate" ).datepicker('option', 'minDate', dateText);
                     }
                 });
               $( "#endDate" ).datepicker({
                     minDate:0, 
                     showButtonPanel: true, 
-                    currentText: '오늘',
                     dateFormat: "yy-mm-dd",
                     dayNamesMin:['월', '화', '수', '목', '금', '토', '일']
                 });

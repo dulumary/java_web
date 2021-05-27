@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <title>데이트 피커</title> 
+
+        <!-- datepicker 라이브러리 위에 있어야 한다.  -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>        
+
+        <!-- datepicker 라이브러리 -->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <!-- 스크립트의 위치는 head 태그 안에 있을 수도 있다. -->
+        <script>
+            // ready 함수: DOM tree가 모두 구성된 후 불려지는 함수
+            $(document).ready(function() {
+
+                $('#datepicker').datepicker();
+
+                $('#datepickerOption').datepicker({
+                    changeMonth: true,  // 월 셀렉트 박스 
+                    changeYear: true,   // 년 셀렉트 박스 
+                    dateFormat:"yy-mm-dd",  // 표시 포멧 
+                    showAnim: "slide",  // 애니메이션 효과 
+                    
+                });
+
+                $('#datepickerEvent').datepicker({
+                    changeMonth: true,  // 월 셀렉트 박스  
+                    dateFormat:"yy-mm-dd",  // 표시 포멧 
+                    // 데이트 피커가 열리기 전에 호출 되는 함수
+                    beforeShow: function(input) { 
+                        alert("데이트 피커가 열렸다!");
+                    },
+
+                    // 날짜가 선택되었을때 호출되는 함수
+                    onSelect:function(dateText) {
+                        alert("선택된 날짜 " + dateText);
+                    },
+
+                    // 데이트 피커가 닫혔을때 호출되는 함수 
+                    // 선택되거나 그냥 닫혔을때 둘다 호출
+                    onClose:function(dateText) {
+                        alert("닫혔다.!!");
+                    }
+
+                });
+            });
+        </script>
+    </head> 
+    <body> 
+       날짜 선택 : <input type="text" id="datepicker">
+        <br>
+        <br>
+       날짜 선택 (옵션) : <input type="text" id="datepickerOption">
+
+       <br>
+        <br>
+
+        날짜 선택 (이벤트) : <input type="text" id="datepickerEvent">
+    </body> 
+</html>

@@ -39,6 +39,6 @@
 | `<form method=”전송 방식” action=”전송할 서버 주소”>...</form>` | 입력 양식을 지정 입력된 값들을 서버에 전송하기 위한 방식 정의                                                                                      |
 | `<input type=”속성”>`                                           | 사용자로부터 입력을 받을 수 있는 form을 만드는 태그<br>* 속성의 종류 - text - password - checkbox  - radio - button - submit - file - hidden                           |
 | `<select><option>항목</option></select>`                                           | 항목을 선택할 수 있는 태그                      |
-| `<textarea>...</textarea>`                                           | 텍스트 내용을 담는 공간 |
+| `< textarea >...</ textarea >`                                           | 텍스트 내용을 담는 공간 |
 | `<button>확인</button>`                                           | 버튼                           |                    
 | `<table>   <tr>       <td>...</td>   </tr> </table>`            | 테이블 태그 표를 그릴 때 사용한다. `<tr>`태그는 행을 나타낸다. <br> `<td>`태그는 열을 나타낸다. colspan, rowspan 요소를 사용하여 열 또는 행을 합칠 수 있다. |
