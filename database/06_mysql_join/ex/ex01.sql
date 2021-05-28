@@ -29,7 +29,6 @@ where
 A.nickname = "하구루";
 
 
-
 # INNER JOIN: 테이블들의 교집합
 -- 하구루의 판매 물품 리스트 가져오기 : 결과 2행
 select A.*, B.* 
@@ -75,8 +74,6 @@ right join seller AS B
 on A.sellerId = B.id
 where 
 B.nickname = '하구루';
-
-
 
 -- 제목이 바퀴벌레로 시작하는 글을 올린 사람의 닉네임과 매너온도 확인하기
 select A.nickname, A.temperature
