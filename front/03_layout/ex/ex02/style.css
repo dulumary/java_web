@@ -2,19 +2,20 @@
     - 왼쪽 정렬시 margin:0 기본으로 주어진 마진을 없앤다. 
     - 가운데 정렬시 margin:auto;
 */
-* { margin:auto;} 
-#wrap {width:1200px; background-color: #999;} 
+
+#wrap {width:1200px; background-color: #999; margin:auto;} 
 
 header {height:100px; background-color: darkorchid;}
 
 .nav1 {height:50px; background-color: deepskyblue;}
 
 .contents {height:450px; background-color:bisque;}
-.contents > .content1 {width:70%; height:450px; background-color: coral;}
-.contents > .aside1 {width:30%; height:450px; background-color:indianred;}
-.contents > .content1 > .at1 {width:700px; height:200px; background-color:cadetblue; margin-top:15px;}
+.contents > .content1 {width:800px; height:450px; background-color: coral;}
+.contents > .aside1 {width:400px; height:450px; background-color:indianred;}
+.contents > .content1 > .aticle1 {width:100%; height:50%; background-color:gold;}
+.contents > .content1 > .aticle2 {width:100%; height:50%; background-color:crimson;}
 
-footer {height:200px; background:#777;}
+footer {height:150px; background:#777;}
 
 /* 밑으로 떨어져 있던 aside1을 옆에 붙인다. */
 .flex-row {display:flex;}

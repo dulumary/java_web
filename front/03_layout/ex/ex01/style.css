@@ -1,6 +1,6 @@
 .box-size-100 {width:100px; height:100px; }
 /* padding 속성은 컨텐츠 안에 여백을 주면서 상자가 커진다.(레이아웃에선 잘안씀) */
-#div1 {background-color: darkorange; margin-bottom: 20px; padding:10px;}
+#div1 {background-color: darkorange; margin-bottom: 20px; padding:30px;}
 #div2 {background-color:mediumseagreen}
 
 #div3 {background-color:orchid;}

@@ -84,6 +84,6 @@ GROUP BY recruit.type ;
 SELECT company.name, avg(recruit.salary) as salary, company.scale, company.headcount
 FROM `company` JOIN `recruit`ON company.id = recruit.company
 WHERE recruit.region = '성남시 분당구'
-GROUP BY company.id HAVING salary > 7000
-ORDER BY company.scale DESC;
+GROUP BY company.id HAVING salary >= 7000
+ORDER BY company.headcount DESC;
 
