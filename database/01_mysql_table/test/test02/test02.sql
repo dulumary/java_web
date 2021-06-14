@@ -16,5 +16,6 @@ ALTER TABLE `review` ADD COLUMN `userName` varchar(32) NOT NULL AFTER `menu`;
 
 # 3. 컬럽 타입 변경
 
-ALTER TABLE `review` MODIFY COLUMN `store` varchar(32) NOT NULL;
 ALTER TABLE `review` MODIFY COLUMN `menu` varchar(32) NOT NULL;
+
+ALTER TABLE `review` CHANGE COLUMN `store` `storeName` varchar(32) NOT NULL;

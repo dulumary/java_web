@@ -31,13 +31,13 @@ INSERT INTO `user`
 )
 VALUE
 (
-    '신보람',
+    '김인규',
     '19991108',
     '독서,노래,영화',
     '안녕하세요.\n저는 누구일까요?',
     now(),
     now(),
-    'sbr@kakao.com'
+    'lecture@hagulu.com'
 );
 
 
@@ -66,11 +66,11 @@ INSERT INTO `user`
 )
 VALUE
 (
-    '신보람',
+    '김인규',
     '19991108',
     '독서,노래,영화',
     '안녕하세요.\n저는 누구일까요?',
     now(),
     now(),
-    'sbr@kakao.com'
+    'lecture@hagulu.com'
 );

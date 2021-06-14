@@ -21,7 +21,7 @@ var array = [5, 4, 23, 7, 11, 10, 15, 20, 15, 8];
 * 주어진 dictionary 를 이용해서 화면에 아래와 같이 console에 출력 하세요. 
 
 ```
-var goods = {"name": "육개장", "price": 1300, "expirationDate:"2021/07/04"};
+var goods = {"name": "육개장", "price": 1300, "expirationDate":"2021/07/04"};
 ```
 
 > 출력 예시 
@@ -36,12 +36,12 @@ var goods = {"name": "육개장", "price": 1300, "expirationDate:"2021/07/04"};
 
 ```
 var restaurantList = [
-    {"name":"토속촌", memu:"한식", "location":"서울 종로구"}, 
-    {"name":"아이러브떡볶이", memu:"분식", "location":"서울 중구"}, 
-    {"name":"영동족발", memu:"고기", "location":"서울 서초구"}, 
-    {"name":"연돈", menu:"일식", "location":"제주도"}, 
-    {"name":"쿠이", menu:"양식", "location":"부산"},
-    {"name":"하남돼지집", menu:"고기", "location":"성남시 분당구"}
+        {"name":"토속촌", "memu":"한식", "location":"서울 종로구"}, 
+        {"name":"아이러브떡볶이", "memu":"분식", "location":"서울 중구"}, 
+        {"name":"영동족발", "menu":"고기", "location":"서울 서초구"}, 
+        {"name":"연돈", "menu":"일식", "location":"제주도"}, 
+        {"name":"쿠이", "menu":"양식", "location":"부산"},
+        {"name":"하남돼지집", "menu":"고기", "location":"성남시 분당구"}
 ];
 
 ```

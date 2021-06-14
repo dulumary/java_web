@@ -26,17 +26,17 @@ SELECT count(1) FROM `user`;
 # id가 3번인 데이터 조회 
 SELECT * FROM `user` WHERE `id` = 3;
 
-# 이름이 `신바다`인 사용자의 생년월일 조회
-SELECT `yyyymmdd` FROM `user` WHERE `name` = '신바다'; 
+# 이름이 `김바다`인 사용자의 생년월일 조회
+SELECT `yyyymmdd` FROM `user` WHERE `name` = '김바다'; 
 
-# 이름이 `신바다`가 아닌 사용자의 데이터 조회
-SELECT * FROM `user` WHERE `name` != '신바다';
+# 이름이 `김바다`가 아닌 사용자의 데이터 조회
+SELECT * FROM `user` WHERE `name` != '김바다';
 
 # 데이터의 생성일이 특정일 이후인 데이터들 조회 
 SELECT * FROM `user` WHERE `createdAt` > '2021-03-25 00:00:00';
 
-# 이름이 신바다인 데이터의 개수 조회
-SELECT count(*) FROM `user` WHERE `name` = '신바다';
+# 이름이 김바다 데이터의 개수 조회
+SELECT count(*) FROM `user` WHERE `name` = '김바다';
 
 # 자기소개가 없는(NULL인) 데이터 조회
 SELECT * FROM `user` WHERE `introduce` is null;
@@ -53,5 +53,5 @@ WHERE `id` in (3, 4, 5, 6);
 # id가 3번이거나 4번인 데이터 조회
 SELECT * FROM `user` WHERE `id` = 3 OR `id` = 4;
 
-# 이름이 `신바다`이면서 취미가 `사냥하기`인 데이터 조회
-SELECT * FROM `user` WHERE `name` = '신바다' AND `hobby` = '사냥하기';
+# 이름이 `김바다`이면서 취미가 `사냥하기`인 데이터 조회
+SELECT * FROM `user` WHERE `name` = '김바다' AND `hobby` = '사냥하기';

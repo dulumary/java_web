@@ -12,13 +12,13 @@ INSERT INTO `user`
 )
 VALUE
 (
-    '신보람',
+    '김인규',
     '19991108',
     '독서,노래,영화',
     '안녕하세요.\n저는 누구일까요?',
     now(),
     now(),
-    'sbr@kakao.com'
+    'lecture@hagulu.com'
 );
 
 -- 한번에 여러행 추가
@@ -44,20 +44,23 @@ VALUES
     'kkk@gmail.com'
 ),
 (
-    '신바다',
+    '김바다',
     '20191115',
     '사냥하기',
     '나랑 놀아줄 집사를 모집합니다',
     now(),
     now(),
-    'gleams@kakao.com'
+    'hagulu@naver.com'
 ),
 (
-    '신바다',
+    '김바다',
     '20190708',
     '컴퓨터',
     '할말이 없구먼',
     now(),
     now(),
-    'marobiana@naver.com'
+    'hagulu@kakao.com'
 );
+
+
+TRUNCATE TABLE `user`;

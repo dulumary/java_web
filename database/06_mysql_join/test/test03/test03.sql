@@ -12,7 +12,7 @@ CREATE TABLE `company` (
 
 CREATE TABLE `recruit`(
     `id` int NOT NULL AUTO_INCREMENT primary key,
-    `company`int NOT NULL, 
+    `companyId`int NOT NULL, 
     `position`varchar(64) NOT NULL,
     `responsibilities` varchar(128) NOT NULL, 
     `qualification` text NOT NULL,
@@ -35,7 +35,7 @@ VALUES ('Cacao', '인터넷 포털', '대기업', 2848, now(), now()),
 ('Naber', '인터넷 포털', '대기업', 4048, now(), now()),
 ('우와한형제들', '소프트웨어 솔루션', '중견기업', 926, now(), now());
 
-INSERT INTO `recruit`(`company`, `position`, `responsibilities`, `qualification`, `type`, `region`, `salary`, `deadline`, `createdAt`, `updatedAt`) 
+INSERT INTO `recruit`(`companyId`, `position`, `responsibilities`, `qualification`, `type`, `region`, `salary`, `deadline`, `createdAt`, `updatedAt`) 
 VALUES (1, '안드로이드 개발자', '메신저앱 개발', 'kotlin 경력 3년 이상', '정규직', '성남시 분당구', 7300, '2026-03-13', now(), now()),
 (1, '안드로이드 개발자', '쇼핑 서비스 개발', 'kotlin 경력 3년 이상', '정규직', '성남시 분당구', 6300, '2026-04-04', now(), now()),
 (1, '웹 back-end 개발자', '이모티콘 샵 API 서버 개발', 'spring 경력 3년 이상', '정규직', '성남시 분당구', 7000, '2026-03-28', now(), now()),
@@ -55,19 +55,19 @@ VALUES (1, '안드로이드 개발자', '메신저앱 개발', 'kotlin 경력 3�
 # 3. 연봉순 정렬 
 
 SELECT company.name, recruit.position, recruit.qualification, recruit.type,  recruit.salary
-FROM `company` JOIN `recruit`ON company.id = recruit.company ORDER BY recruit.salary DESC;
+FROM `company` JOIN `recruit`ON company.id = recruit.companyId ORDER BY recruit.salary DESC;
 
 # 4. 복합 조건 
 
 SELECT company.name, company.scale, recruit.position, recruit.qualification, recruit.type,  recruit.salary
-FROM `company` JOIN `recruit`ON company.id = recruit.company 
+FROM `company` JOIN `recruit`ON company.id = recruit.companyId 
 WHERE company.scale = '대기업' AND recruit.type = '정규직' AND recruit.salary >= 7000
 ORDER BY recruit.salary DESC LIMIT 3;
 
 # 5. 기업별 공고 수 
 
 SELECT company.name, count(*) as count, company.business, company.headcount
-FROM `company` JOIN `recruit`ON company.id = recruit.company
+FROM `company` JOIN `recruit`ON company.id = recruit.companyId
 WHERE recruit.deadline < '2026-05-01'
 GROUP BY recruit.company ORDER BY count DESC;
 
@@ -75,14 +75,14 @@ GROUP BY recruit.company ORDER BY count DESC;
 # 6. 근무형태 별 평균 연봉 
 
 SELECT recruit.type, avg(recruit.salary) as salary
-FROM `company` JOIN `recruit`ON company.id = recruit.company
+FROM `company` JOIN `recruit`ON company.id = recruit.companyId
 WHERE company.scale = '중견기업'
 GROUP BY recruit.type ;
 
 # 7. 기업별 평균 연봉 
 
 SELECT company.name, avg(recruit.salary) as salary, company.scale, company.headcount
-FROM `company` JOIN `recruit`ON company.id = recruit.company
+FROM `company` JOIN `recruit`ON company.id = recruit.companyId
 WHERE recruit.region = '성남시 분당구'
 GROUP BY company.id HAVING salary >= 7000
 ORDER BY company.headcount DESC;

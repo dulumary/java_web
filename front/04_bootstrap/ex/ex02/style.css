@@ -10,5 +10,6 @@ nav {height:50px;}
 
 footer {height:100px;}
 
-a {text-decoration: none; }
-a:hover {text-decoration: none !important;}
+
+.main-link {color:black}
+.main-link:hover {color:gray}

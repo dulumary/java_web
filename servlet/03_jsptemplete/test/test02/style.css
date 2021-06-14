@@ -1,0 +1,46 @@
+#wrap {
+	width:1200px;	
+    margin:auto;
+}
+
+header {
+	height:100px;
+}
+
+header > .logo {
+	width:150px;
+}
+
+nav {
+    height:40px;
+}
+
+.main-link {
+    color: black;
+    font-weight: bold;
+}
+
+.main-link:hover {
+    color:#56a105;
+}
+
+.searchbar {
+	width:400px;	
+}
+
+.photo-size {
+	width:150px;
+}
+
+.album-size {
+    width:200px;
+}
+
+.music-info {
+    font-size:14px;
+    font-weight: 300;
+}
+
+footer {
+	height:200px;
+}

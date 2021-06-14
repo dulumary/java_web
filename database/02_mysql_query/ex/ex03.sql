@@ -3,7 +3,7 @@
 */
 UPDATE `user`
 SET
-    `email` = 'paritea@gmail.com'
+    `email` = 'hagulu@gmail.com'
 WHERE
     id = 4;
 

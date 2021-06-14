@@ -1,52 +1,76 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>자바스크립트</title>
+        <title>자바스크립트 기본 예제</title>
     </head>
     <body>
+        <!-- javascript 영역-->
         <script>
-            // 1. 반복문을 활용해서 alert창이 다섯번 뜨게 만드세요.
-            for (let i = 0; i < 5; i++) {
-                alert("자바스크립트 " + i);
+            // 반복문
+
+            // 0 ~ 4: 5번
+            for (var i = 0; i < 5; i++) {
+                document.write(i); // 문서에 출력된다.
             }
 
-            // 2. 주어진 배열 요소값들의 합계를 구해서 console에 출력하세요. 
-            var array = [5, 4, 23, 7, 11, 10, 15, 20, 15, 8];
+            // 배열
+            var arr = [10, 20, 30, 40];
+
+            // 배열에 값 동적으로 추가하기
+            arr.push(50);
+            arr.push(60);
+
+            // 배열의 요소만큼 인덱스를 얻는다
+            for (var idx in arr) {
+                console.log("idx" + idx + ": " + arr[idx]);
+            }
+
+            // 배열의 값을 얻는다
+            for (var val of arr) {
+                console.log("값:" + val);
+            }
+
+            // dictionary : key와 value의 쌍으로 이루어진 구조 (JAVA의 Map과 비슷)
+            var scoreInfo = {'subject': '국어', 'score': 98, 'rank':3};
+            console.log(scoreInfo);
+
+            // 비어있는 dictionary에 값 추가하기
+            var person = {};
+            person['name'] = '김인규';
+            person['age'] = 25;
+            person['gender'] = '남자';
+            console.log(person);  //  {name: "김인규", age: 25, gender: "남자"}
+
+            // 키로 값 접근하기
+            console.log("이름:" + person['name']);
+            console.log("이름:" + person.name);
+            console.log("나이:" + person['age']);
+            console.log("나이:" + person.age);
+            console.log("성별:" + person['gender']);
+            console.log("성별:" + person.gender);
+
+            // 같은 키에 값 넣기  => 값 수정
+            person['age'] = 25 + 1;   
+            console.log(person);
+
+            // key로 값 삭제하기
+            delete person['gender'];
+            console.log(person);
+
+            // 특정 key가 존재하는지 여부 확인
+            if ('age' in person) {
+                console.log("나이 정보가 존재합니다.");
+            } else {
+                console.log("나이 정보가 존재하지 않습니다.");
+            }
+
+            // 반복문으로 요소 하나하나 접근하기
+            // 1) key들을 모두 가져온다.
+            var keys = Object.keys(person);
+            for (var key of keys) {
+                console.log(key + ": " + person[key]);
+            }
             
-            // 1) for
-            var sum = 0;
-            for (let i = 0; i < array.length; i++) {
-                sum += array[i];
-            }
-            console.log(sum);
-
-            // 2) for of
-            var sum1 = 0;
-            for (val of array) {
-                sum1 += val;
-            }
-            console.log(sum1);
-
-            // 3. 주어진 dictionary 를 이용해서 화면에 아래와 같이 console에 출력하세요. 
-            var goods = {"name": "육개장", "price": 1300, "expirationDate":"2021/07/04"};
-            console.log("제품:" + goods['name'] + ", 가격:" + goods['price'] + ", 유통기한:" + goods['expirationDate']);
-
-            // 4. 값 출력
-            var restaurantList = [
-                {"name":"토속촌", "menu":"한식", "location":"서울 종로구"}, 
-                {"name":"아이러브떡볶이", "menu":"분식", "location":"서울 중구"}, 
-                {"name":"영동족발", "menu":"고기", "location":"서울 서초구"}, 
-                {"name":"연돈", "menu":"일식", "location":"제주도"}, 
-                {"name":"쿠이", "menu":"양식", "location":"부산"},
-                {"name":"하남돼지집", "menu":"고기", "location":"성남시 분당구"}
-            ];
-
-            for (let i = 0; i < restaurantList.length; i++) {
-                menuDict = restaurantList[i];
-                if (menuDict['menu'] != '고기') {
-                    console.log("상호명: " + menuDict['name'] + ", 위치: " + menuDict['location']);
-                }
-            }
-        </script>
+        </script> 
     </body>
 </html>

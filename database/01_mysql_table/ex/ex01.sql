@@ -19,11 +19,11 @@ CREATE TABLE `person` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
-desc person;
+DESC `person`;
 
 
 /* ### 테이블 삭제하기 ### */
-drop table `person`;
+DROP TABLE `person`;
 
 /* ### 테이블 다시 만들기 ### */
 CREATE TABLE `person` (
@@ -38,14 +38,14 @@ CREATE TABLE `person` (
 
 /* ### 테이블 수정하기 ### */
 
-/* 1) 테이블 이름 변경 */
+
 ALTER TABLE `person` RENAME `user`;
 
-/* 2) email 컬럼 추가(없을 수 있음) */
+
 ALTER TABLE `user` ADD COLUMN `email` varchar(16) NULL;
 
-/* 3) email 컬럼 수정:  16 → 32으로 수정하기 */ 
+
 ALTER TABLE `user` MODIFY COLUMN `email` varchar(32) NULL;
 
-/* 4) 컬럼 이름/자료형 수정: birth(int) → yyyymmdd(varchar) */
+
 ALTER TABLE `user` CHANGE COLUMN `birth` `yyyymmdd` varchar(16);
