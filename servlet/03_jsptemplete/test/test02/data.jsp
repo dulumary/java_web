@@ -8,7 +8,7 @@
 	artistInfo.put("name", "아이유");
 	artistInfo.put("debute", 2008);
 	artistInfo.put("agency", "EDAM엔터테인먼트");
-	artistInfo.put("photo", "https://w.namu.la/s/3ca92265fffe4dd38a729df3df7dd41ea3ef12b72383958c8fd0bea79ffaa0331810fb8bea8ba09156d69e5f792eef522dd8eb932389ed972ff233c2c9adb34fc92d9ebceb03cdd9ae4ff0093f88e0e7bbe21d3251555878b233fa2a5f6af14544c8dd26f4cb608d0b0101c91fc37dce");
+	artistInfo.put("photo", "https://pbs.twimg.com/profile_images/1374979417915547648/vKspl9Et_400x400.jpg");
 
 
 // 아이유 노래 리스트 
@@ -42,7 +42,7 @@
 	musicInfo.put("album", "palette");
 	musicInfo.put("singer", "아이유");
 	musicInfo.put("thumbnail", "https://upload.wikimedia.org/wikipedia/ko/b/b6/IU_Palette_final.jpg");
-	musicInfo.put("time", "253");
+	musicInfo.put("time", 253);
 	musicInfo.put("composer", "제휘,김희원");
 	musicInfo.put("lyricist", "아이유");
 	musicList.add(musicInfo);

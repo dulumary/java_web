@@ -25,12 +25,12 @@
 		<section>
 			<div class="singer-info d-flex border border-success  mt-2 p-3">
 				<div class="singer-photo">
-					<img class="photo-size" src="https://w.namu.la/s/c828cf9773b5d9f5873b4630e3e838f719b9b1ea46425eb8823f3a03c9b6f7b2bd7678eade3ebc979e94ac538a3f1398a7d265fbc1c5c86ce79c8efffc5c43b9fa01537f6e2fb6ac46123a561d575a0deef2c5dec261fd968ec6f31be6b64ff81a60120172649d32fc8f7873997ee25f">
+					<img class="photo-size" src="<%=artistInfo.get("photo")%>">
 				</div>	
 				<div class="singer-info ml-4"> 
-					<h3>아이유</h3>
-					<div>EDAM엔터테인먼트</div>
-                    <div>2008 데뷔</div>
+					<h3><%=artistInfo.get("name")%></h3>
+					<div><%=artistInfo.get("agency")%></div>
+                    <div><%=artistInfo.get("debut")%> 데뷔</div>
 				</div>
 			</div>
 			
