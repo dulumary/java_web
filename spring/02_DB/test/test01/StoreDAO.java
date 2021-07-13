@@ -9,5 +9,5 @@ import com.hagulu.test.lesson02.model.Store;
 @Repository
 public interface StoreDAO {
 
-	public List<Store> selectSeller();
+	public List<Store> selectStore();
 }

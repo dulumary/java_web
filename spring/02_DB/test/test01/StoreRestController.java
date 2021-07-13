@@ -17,6 +17,6 @@ public class StoreRestController {
 
 	@RequestMapping("/lesson02/test01")
 	public List<Store> test01() {
-		return storeBO.getSeller();
+		return storeBO.getStore();
 	}
 }

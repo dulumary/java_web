@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.hagulu.test.lesson05.dao.WeatherHistoryDAO">
+ 
+ 	<insert id="insertWeatherHistory" parameterType="map">
+ 		INSERT INTO `weatherhistory`
+ 		(
+ 			`date`
+ 			, `weather`
+ 			, `temperatures`
+ 			, `precipitation`
+ 			, `microDust`
+ 			, `windSpeed`
+ 			, `createdAt`
+ 			, `updatedAt`
+ 		) VALUES 
+ 		(
+ 			#{date}
+ 			, #{weather}
+ 			, #{temperatures}
+ 			, #{precipitation}
+ 			, #{microDust}
+ 			, #{windSpeed}
+ 			, now()
+ 			, now()
+ 		);
+ 		
+ 		
+ 	</insert>
+ 	
+ 	<select id="selectWeatherHistory" resultType="com.hagulu.test.lesson05.model.Weather">
+ 		SELECT 
+ 			`date`
+ 			, `weather`
+ 			, `temperatures`
+ 			, `precipitation`
+ 			, `microDust`
+ 			, `windSpeed`
+ 			, `createdAt`
+ 			, `updatedAt`
+ 		FROM `weatherhistory`;
+ 	</select>
+ </mapper>

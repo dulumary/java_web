@@ -46,6 +46,8 @@
         <hr>
 
         <input id="basicText" type="text">
+
+        <div id="text"></div>
         <script>
             $(document).ready(function() {
 
@@ -82,15 +84,54 @@
                 // 4. 길이 제한 
                 // 입력 상황 이벤트 
                 // input, keyup
-                $("#basicText").on("input", function() {
+                var input = document.getElementById("basicText");
+                var divText = document.getElementById("text");
+
+                // key down key press 는 6번째 a 가 들어 오지도 않은 상태 이므로 적절한 이벤트가 아니다. 
+
+                // $("#basicText").on("keydown", function(e) {
+                //     console.log(input.value);
+                //     console.log("keydown");
+                // });
+
+                // $("#basicText").on("keypress", function(e) {
+                //     console.log(input.value);
+                //     console.log("keypress");
+                // });
+
+                // $("#basicText").on("input", function(e) {
+                //     console.log(input.value);
+                //     console.log("input");
+                // });
+
+                // $("#basicText").on("keyup", function(e) {
+                //     console.log(input.value);
+                //     console.log("keyup");
+                // });
+
+                $("#basicText").on("input", function(e) {
+                    e.preventDefault();
                     var inputText = $(this).val();
                     console.log(inputText);
-                    if(inputText.length > 5) {
-                        alert("5자 넘어 갔어요!");
-                        // 내 인풋에 새로운 값으로 교체
-                        $(this).val(inputText.slice(0, 5));
+
+                    if(inputText.length == 5) {
+                        alert();
+                        
                     }
+            
+                    
+                    // if(inputText.length > 5) {
+                        
+                    //     // 내 인풋에 새로운 값으로 교체
+                    //     // $(this).val(inputText.slice(0, 5));
+
+                    //     input.value = "a";
+                    //     divText.innerText = "a";
+                    //     alert("5자 넘어 갔어요!");
+                        
+                    // }
                 });
+                
 
 
             });

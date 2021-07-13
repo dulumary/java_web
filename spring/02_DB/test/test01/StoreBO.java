@@ -14,7 +14,7 @@ public class StoreBO {
 	@Autowired
 	private StoreDAO storeDAO;
 	
-	public List<Store> getSeller() {
-		return storeDAO.selectSeller();
+	public List<Store> getStore() {
+		return storeDAO.selectStore();
 	}
 }
