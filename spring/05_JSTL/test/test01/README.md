@@ -4,14 +4,14 @@
 
 > 출력 예시 
 
-![test1](/material/images/dulumary/web/jstl/test01_1_result.png)
+![test1](test01_1_result.png)
 
 ### 2. JSTL core 연산
 
 * 위에서 만든 두개의 변수의 사칙 연산 결과를 아래와 같이 출력하세요. 
 
 > 출력 예시 
-![test2](/material/images/dulumary/web/jstl/test01_2_result.png)
+![test2](test01_2_result.png)
 
 ### 3. core out 
 
@@ -23,7 +23,7 @@
 
 > 출력 예시 
 
-![test3](/material/images/dulumary/web/jstl/test01_3_result.png)
+![test3](test01_3_result.png)
 
 
 ### 4. core if
@@ -33,7 +33,7 @@
 
 > 출력 예시 
 
-![test4](/material/images/dulumary/web/jstl/test01_4_result.png)
+![test4](test01_4_result.png)
 
 
 ### 5. core if
@@ -43,4 +43,4 @@
 
 > 출력 예시 
 
-![test5](/material/images/dulumary/web/jstl/test01_5_result.png)
+![test5](test01_5_result.png)
