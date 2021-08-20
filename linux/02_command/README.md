@@ -121,37 +121,4 @@
 | set nu | 에디터에 라인 번호 표시 |
 
 
-## 인터넷 연결
-* 인터넷 연결이 안될경우 아래 파일을 연다. 
-```
-vi /etc/sysconfig/network-scripts/ifconf-enp0s3
-```
-
-```
-ONBOOT=yes 
-```
-로 변경 
-
-## ssh 접속 
-
-* 방화벽 설정 
-
-```
-firewall-cmd --list-all
-firewall-cmd --permanent --zone=public --add-port=22/tcp
-firewall-cmd --reload
-```
-
-## port forward
-
-* 여러 컴퓨터가 하나의 네트워크게 포함되어 있을때, 특정 포트가 어떤 컴퓨터로 데이터를 보낼지 선택하게 해주는 기능
-* 일반적으로 공유기 하나에 여러개의 컴퓨터가 연결 되어 있을때, 외부에서 전달된 데이터를 어느 컴퓨터로 전달할지 정한다. 
-* virture machine 의 경우 하나의 컴퓨터에 두개의 컴퓨터가 연결되는 것과 같음
-* 특정 포트를 virture 머신으로 데이터를 전달 하도록 해주어야함 
-
-* 127.0.0.1 로 접속 
-
-
-## putty 설정 
-
 

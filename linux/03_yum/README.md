@@ -6,11 +6,13 @@
 
 ## Java 설치 
 
+### Amazon Corretto 설치 
+
+ * Amazon Corretto 란 무료로 사용할 수 있는 Open Java Development Kit (OpenJDK) 의 프로덕션용 멀티플
+랫폼 배포판입니다. 
+
 ```
-yum list java*jdk-devel
-
-
-yum install java-11-openjdk-devel.x86_64
+sudo yum install java-11-amazon-corretto
 ```
 
 ## 리눅스 디렉토리 구조 
@@ -56,15 +58,6 @@ tar -xvf apache-tomcat-9.0.45.tar.gz
 mv apache-tomcat-9.0.45 tomcat
 mv tomcat/ /usr/local/
 ```
-
-* 톰캣을 위한 방화벽 설정 
-
-```
-firewall-cmd --zone=public --permanent --add-port=8080/tcp
-firewall-cmd --reload
-```
-
-* 포트포워드에 8080 추가 
 
 ## mysql 8 설치 
 
@@ -124,59 +117,5 @@ SET GLOBAL validate_password_policy=LOW;
 
 ```
 CREATE DATABASE testdata;
-```
-
-## Jenkins 설치 
-
-* yum jenkins repository 추가 
-    * yum repository는 Package 를 모아 놓은 저장소 
-    * 기본으로 포함된 저장소가 없을 경우 인터넷에서 다운 받아서 추가해준다. 
-* 아래 명령어로 yum jenkins repository 추가 
-
-```
-wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
-```
-
-* GPG key 등록 
-    * GPG key는 yum 통해 다운되는 내용이 해킹등에 의해서 변조 되었는지 검증해주는 기능
-* 인터넷에서 위와 같이 yum repository를 추가해서 사용할경우 이에 매칭되는 key도 등록해주어야 한다. 
-* 아래 명령어로 jenkins 키 등록
-
-```
-rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
-```
-
-* 설치 진행 
-```
-yum install jenkins
-```
-
-* Jenkins port 변경
-    * 기본 port가 tomcat과 동일한 8080이기 때문에 바꾸어 주어야 한다. 
-
-* 아래 경로의 설정 파일을 수정한다. 
-
-```
-vi /etc/sysconfig/jenkins
-```
-
-* 설정파일의 vi 검색기능을 통해서 아래 키워드를 검색하여 내용을 수정한다. 
-
-```
-JENKINS_PORT="9090"
-```
-
-* Jenkins 재시작
-
-```
-service jenkins stop
-service jenkins start
-```
-
-* jenkins 을 위한 방화벽 설정 
-
-```
-firewall-cmd --zone=public --permanent --add-port=9090/tcp
-firewall-cmd --reload
 ```
 
