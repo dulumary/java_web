@@ -59,17 +59,12 @@ mv apache-tomcat-9.0.45 tomcat
 mv tomcat/ /usr/local/
 ```
 
-## mysql 8 설치 
+## mysql 5 설치 
 
-*  최신 버젼 설치 패키지를 내려 받는다. (rpm)
+*  5.7 설치 패키지를 내려 받는다. (rpm)
 
+yum install https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
 ```
-yum install https://dev.mysql.com/get/mysql80-community-release-el8-1.noarch.rpm
-```
-
-* install 주소는 `mysql 8 yum install` 로 검색하여 최신 버젼 링크 확인
-
-https://dev.mysql.com/downloads/repo/yum/
 
 
 * mysql server 설치 
@@ -111,6 +106,7 @@ ALTER USER 'root'@'localhost' identified by 'dulumarY!';
 
 ```
 SET GLOBAL validate_password_policy=LOW;
+SET GLOBAL validate_password_length=4;
 ```
 
 * create database 명령어를 통해서 필요한 database 를 만든다. 
