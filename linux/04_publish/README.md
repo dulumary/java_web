@@ -7,15 +7,15 @@
 * 톰켓 접속을 위한 8080포트를 열어 준다. 
 
 1) 인스턴스 세부 화면에서 아래 보안을 선택하고 스크롤을 내린다. 
-![firewall](firewall_1.jpg)
+![firewall](firewall_1.JPG)
 
 
 2) 보안 그룹의 링크를 선택한다. 
-![firewall](firewall_2.jpg)
+![firewall](firewall_2.JPG)
 
 
 3) Edit inbound rules 버튼을 클릭한다. 
-![firewall](firewall_3.jpg)
+![firewall](firewall_3.JPG)
 
 
 4) 규칙 추가를 누르고 추가된 입력창에 아래 내용을 선택, 입력 한다. 
@@ -24,7 +24,7 @@
   * 포트범위 : 8080
   * 소스 : anywhere ipv4 
 
-![firewall](firewall_4.jpg)
+![firewall](firewall_4.JPG)
 
 
   
@@ -93,7 +93,7 @@ sudo bin/catalina.sh start
 http://3.123.212.211:8080/manager
 ```
 
-![manager](manager_1.jpg)
+![manager](manager_1.JPG)
 
 
 ## war export
@@ -129,27 +129,27 @@ public class MarondalgramApplication extends SpringBootServletInitializer {
 
 4) 프로젝트에서 오른클릭을 하고 export를 선택한다. 
 
-![war](export_war_1.jpg)
+![war](export_war_1.JPG)
 
 5) war을 검색하고 항목을 선택한다. 
 
-![war](export_war_2.jpg)
+![war](export_war_2.JPG)
 
 6) 해당하는 프로젝트를 선택하고 저장할 경로와 파일이름을 지정한다. 
 * 파일이름은 'ROOT.war' 로 만든다. 
 
-![war](export_war_3.jpg)
+![war](export_war_3.JPG)
 
 
 ## 배포
 
 1) tomcat manager page 에서 war 배포가 보이도록 스크롤을 내린다. 
 
-![publish](publish_1.jpg)
+![publish](publish_1.JPG)
 
 2) war 배로 항목에서 저장한 ROOT.war 파일을 선택하고 배포 버튼을 누른다. 
 
-![publish](publish_2.jpg)
+![publish](publish_2.JPG)
 
 3) 배포 시간이 좀 걸리고 에러가 없이 배포가 완료되면 해당 페이지가 새로고침 된다. 
 
