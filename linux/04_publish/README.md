@@ -1,5 +1,11 @@
 # 배포하기 
 
+# 배포 구조(tomcat)
+![tomcat](server_architecture.png)
+
+# 배포 구조(apache 추가)
+![apache](server_webserver.png)
+
 ## 방화벽 설정
  
 * 서버에서는 일반적으로 특정 port 만 접속 가능하도록 설정해서 보안을 관리 한다. 
