@@ -62,7 +62,7 @@ mv tomcat/ /usr/local/
 ## mysql 5 설치 
 
 *  5.7 설치 패키지를 내려 받는다. (rpm)
-
+```
 yum install https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
 ```
 
